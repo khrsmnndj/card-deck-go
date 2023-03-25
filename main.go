@@ -10,14 +10,14 @@ import (
 func main(){
 	fmt.Println("Card Deck Project")
 	fmt.Println("The Card")
-	card := suffle.GetCard("King of Clubs")
-	cards := []types.Card{
+	var cards types.Cards
+	cards = append(cards,
 		suffle.GetCard("Ace of Hearts"),
 		suffle.GetCard("Jack of Spades"),
 		suffle.GetCard("Queen of Diamonds"),
-	}
-
-	fmt.Println(card)
+	)
+	cards.Append("Spades of ", 7)
+	cards.Append("Clubs of ", 7)
 	fmt.Println(cards)
 	print.Scan("well done")
 }
